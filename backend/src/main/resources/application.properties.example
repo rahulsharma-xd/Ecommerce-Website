@@ -1,0 +1,29 @@
+# Server Configuration
+server.port=8082
+
+# Application Configuration
+spring.application.name=ecommerce-app
+
+# Logging Configuration
+logging.level.root=INFO
+logging.level.com.ecommerce=DEBUG
+
+# H2 Database Configuration
+# Path is relative to backend/ directory, so ../data points to root-level data folder
+spring.datasource.url=jdbc:h2:file:../data/ecommerce_db
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+
+# JPA Configuration
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
+
+# H2 Console (Web Interface)
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+# JWT Configuration (Development Only - CHANGE IN PRODUCTION!)
+# IMPORTANT: Copy this file to application.properties and fill in YOUR OWN secret key
+jwt.secret=YOUR_VERY_SECRET_KEY_HERE_MAKE_IT_LONG_AND_SECURE
+jwt.expiration=86400000

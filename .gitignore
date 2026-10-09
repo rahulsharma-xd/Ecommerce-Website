@@ -1,0 +1,149 @@
+# ==========================================
+# MONOREPO .gitignore
+# E-commerce Full Stack Application
+# Backend: Spring Boot | Frontend: React + Vite
+# ==========================================
+
+# ==========================================
+# BACKEND (Spring Boot / Java / Maven)
+# ==========================================
+
+# Maven
+backend/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Compiled class files
+*.class
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# ==========================================
+# FRONTEND (React / Vite / Node)
+# ==========================================
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Build outputs
+frontend/dist/
+frontend/dist-ssr/
+frontend/.vite/
+*.local
+
+# Frontend logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==========================================
+# EDITORS & IDEs
+# ==========================================
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# Visual Studio
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ==========================================
+# OPERATING SYSTEMS
+# ==========================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ==========================================
+# PROJECT SPECIFIC
+# ==========================================
+
+# Database files (keep structure, ignore data)
+data/
+
+# Local documentation and resources
+READMELOCAL.md
+localResources/
+
+# Local scripts with sensitive data
+backend/update_product_images.sh
+
+# API Testing
+postman/
+
+# Notes
+.notes/
+
+# Learning/Example files
+ClassVsInterfaceExample.java
+DeepDiveExample.java
+
+# ==========================================
+# SENSITIVE FILES - NEVER COMMIT!
+# ==========================================
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+frontend/.env
+backend/src/main/resources/application.properties
+
+# Security keys
+*.key
+*.pem
+*.p12
+*.jks
+
+# ==========================================
+# LOGS
+# ==========================================
+
+*.log
+logs/
+*.log.*

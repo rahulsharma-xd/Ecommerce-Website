@@ -1,0 +1,48 @@
+# Server Configuration
+server.port=8082
+
+# Application Configuration
+spring.application.name=ecommerce-app
+
+# Active Profile
+spring.profiles.active=dev
+
+# Logging Configuration
+logging.level.root=INFO
+logging.level.com.ecommerce=DEBUG
+
+# H2 Database Configuration
+# Path is relative to backend/ directory, so ../data points to root-level data folder
+spring.datasource.url=jdbc:h2:file:../data/ecommerce_db
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+
+# JPA Configuration
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
+
+# H2 Console (Web Interface)
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+# JWT Configuration
+# IMPORTANT: Generate a secure random secret for production!
+# You can use: openssl rand -base64 64
+jwt.secret=CHANGE_THIS_TO_A_SECURE_RANDOM_SECRET_AT_LEAST_256_BITS
+jwt.expiration=86400000
+
+# Email Configuration (Gmail SMTP)
+# To use: Set environment variables EMAIL_USERNAME and EMAIL_PASSWORD
+# EMAIL_PASSWORD should be a Gmail App Password (not your regular password)
+# Generate App Password: https://myaccount.google.com/apppasswords
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=${EMAIL_USERNAME:your-email@gmail.com}
+spring.mail.password=${EMAIL_PASSWORD:your-app-password}
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+spring.mail.properties.mail.smtp.starttls.required=true
+spring.mail.properties.mail.smtp.connectiontimeout=5000
+spring.mail.properties.mail.smtp.timeout=5000
+spring.mail.properties.mail.smtp.writetimeout=5000
